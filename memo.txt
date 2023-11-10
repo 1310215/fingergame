@@ -1,0 +1,39 @@
+<label for="choices">Choose an option:</label>
+<select id="choices" name="choices">
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+  <!-- 他のオプションが続くことができます -->
+</select>
+
+document.getElementById('someElement').textContent = '新しいテキスト内容';
+
+
+
+<div id="myDiv">初期のコンテンツ</div>
+<button onclick="changeContent()">内容を変更</button>
+
+<script>
+function changeContent() {
+  document.getElementById('myDiv').innerHTML = '新しいコンテンツ';
+}
+</script>
+
+
+
+start.addEventListener('click', function() {
+    var intervalId = setInterval(function() {
+        var left = NumToFinger(Math.floor(Math.random() * 5));
+        var right = NumToFinger(Math.floor(Math.random() * 5));
+        document.getElementById('left').innerHTML = left;
+        document.getElementById('right').innerHTML = right;
+    }, 1000); // 1000ミリ秒ごとに繰り返す
+
+    // 60秒後にIntervalを止める
+    setTimeout(function() {
+        clearInterval(intervalId);
+    }, 60000);
+});
+
+
+
